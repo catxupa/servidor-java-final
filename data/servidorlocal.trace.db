@@ -1,0 +1,15 @@
+2026-08-07 11:47:48.027750-01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SERVICO_MODEL" not found (this database is empty); SQL statement:
+select sm1_0.id,sm1_0.descricao,sm1_0.estativo,sm1_0.link_donload,sm1_0.preco,sm1_0.preco_com_desconto,sm1_0.titulo from servico_model sm1_0 where sm1_0.estativo=true [42104-240]
+2026-08-07 11:59:35.703178-01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SERVICO_MODEL" not found (this database is empty); SQL statement:
+select sm1_0.id,sm1_0.descricao,sm1_0.estativo,sm1_0.link_donload,sm1_0.preco,sm1_0.preco_com_desconto,sm1_0.titulo from servico_model sm1_0 where sm1_0.estativo=true [42104-240]
+2026-08-07 11:59:45.839602-01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SERVICO_MODEL" not found (this database is empty); SQL statement:
+select sm1_0.id,sm1_0.descricao,sm1_0.estativo,sm1_0.link_donload,sm1_0.preco,sm1_0.preco_com_desconto,sm1_0.titulo from servico_model sm1_0 where sm1_0.estativo=true [42104-240]
+2026-08-07 12:03:56.973517-01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SERVICO_MODEL" not found (this database is empty); SQL statement:
+select sm1_0.id,sm1_0.descricao,sm1_0.estativo,sm1_0.link_donload,sm1_0.preco,sm1_0.preco_com_desconto,sm1_0.titulo from servico_model sm1_0 where sm1_0.estativo=true [42104-240]
+2026-08-07 12:05:25.559097-01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SERVICO_MODEL" not found (this database is empty); SQL statement:
+select sm1_0.id,sm1_0.descricao,sm1_0.estativo,sm1_0.link_donload,sm1_0.preco,sm1_0.preco_com_desconto,sm1_0.titulo from servico_model sm1_0 [42104-240]
