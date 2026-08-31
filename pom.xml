@@ -50,7 +50,7 @@
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
-			<scope>rumtime</scope>
+			<scope>runtime</scope>
 		</dependency>
 
 		<dependency>
@@ -87,6 +87,13 @@
 			<groupId>org.springdoc</groupId>
 			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
 			<version>3.1.0</version>
+		</dependency>
+
+	<!-- Driver PostgreSQL para Supabase -->
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<scope>runtime</scope>
 		</dependency>
 
 

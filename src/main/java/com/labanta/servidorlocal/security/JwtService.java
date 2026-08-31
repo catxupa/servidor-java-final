@@ -3,6 +3,7 @@ package com.labanta.servidorlocal.security;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import javax.crypto.SecretKey;
@@ -13,12 +14,10 @@ import java.util.Date;
 @Service
 public class JwtService {
 
-    private static final String SECRET_KEY = "${JWT_SECRET}";
+    private final SecretKey chaveSecreta;
 
-    private SecretKey getSigningKey() {
-        return Keys.hmacShaKeyFor(
-                SECRET_KEY.getBytes()
-        );
+    public JwtService(@Value("${jwt.secret}")String segredo){
+        this.chaveSecreta= Keys.hmacShaKeyFor(segredo.getBytes());
     }
 
     public String gerarToken(String username) {
@@ -27,14 +26,14 @@ public class JwtService {
                 .subject(username)
                 .issuedAt(new Date())
                 .expiration(new Date(System.currentTimeMillis() + 3600000 ))
-                .signWith(getSigningKey())
+                .signWith(chaveSecreta)
                 .compact();
     }
 
     public String extrairUsername(String token) {
         return Jwts.parser()
 
-                .verifyWith(getSigningKey())
+                .verifyWith(chaveSecreta)
                 .build()
                 .parseSignedClaims(token)
                 .getPayload()
